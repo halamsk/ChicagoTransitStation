@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name":"turnstile_event",
+  "namespace": "com.udacity.project.cta.arriavls.turnstile",
+   "fields": [
+            {"name": "station_id", "type": "int"},
+            {"name": "station_name", "type": "string"},
+            {"name": "line", "type": "string"}
+       ]
+}

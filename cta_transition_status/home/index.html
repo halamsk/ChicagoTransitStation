@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JupyterLab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+
+
+
+  <script id="jupyter-config-data" type="application/json">
+    {"appName": "JupyterLab", "appNamespace": "jupyterlab", "appSettingsDir": "/opt/conda/share/jupyter/lab/settings", "appUrl": "/lab", "appVersion": "1.0.9", "baseUrl": "/", "buildAvailable": true, "buildCheck": false, "cacheFiles": true, "devMode": false, "disabledExtensions": ["@jupyterlab/application-extension:layout"], "fullAppUrl": "/lab", "fullMathjaxUrl": "/static/components/MathJax/MathJax.js", "fullSettingsUrl": "/lab/api/settings", "fullStaticUrl": "/static/lab", "fullThemesUrl": "/lab/api/themes", "fullTreeUrl": "/lab/tree", "fullWorkspacesApiUrl": "/lab/api/workspaces", "fullWorkspacesUrl": "/lab/workspaces", "ignorePlugins": [], "mathjaxConfig": "TeX-AMS-MML_HTMLorMML-full,Safe", "notebookVersion": "[5, 7, 8]", "quitButton": false, "schemasDir": "/opt/conda/share/jupyter/lab/schemas", "serverRoot": "/home/workspace", "settingsUrl": "/lab/api/settings", "staticDir": "/opt/conda/share/jupyter/lab/static", "staticUrl": "/static/lab", "store_id": 1, "templatesDir": "/opt/conda/share/jupyter/lab/static", "terminalsAvailable": true, "themesDir": "/opt/conda/share/jupyter/lab/themes", "themesUrl": "/lab/api/themes", "token": "", "treeUrl": "/lab/tree", "userSettingsDir": "/root/.jupyter/lab/user-settings", "workspacesApiUrl": "/lab/api/workspaces", "workspacesDir": "/root/.jupyter/lab/workspaces", "workspacesUrl": "/lab/workspaces", "wsUrl": ""}
+  </script>
+
+  
+  <link rel="icon" type="image/x-icon" href="/static/base/images/favicon.ico" class="idle favicon">
+  <link rel="" type="image/x-icon" href="/static/base/images/favicon-busy-1.ico" class="busy favicon">
+  
+
+</head>
+<body>
+
+<script type="text/javascript">
+  /* Remove token from URL. */
+  (function () {
+    var location = window.location;
+    var search = location.search;
+
+    // If there is no query string, bail.
+    if (search.length <= 1) {
+      return;
+    }
+
+    // Rebuild the query string without the `token`.
+    var query = '?' + search.slice(1).split('&')
+      .filter(function (param) { return param.split('=')[0] !== 'token'; })
+      .join('&');
+
+    // Rebuild the URL with the new query string.
+    var url = location.origin + location.pathname +
+      (query !== '?' ? query : '') + location.hash;
+
+    if (url === location.href) {
+      return;
+    }
+
+    window.history.replaceState({ }, '', url);
+  })();
+</script>
+
+<script type="text/javascript" src="/static/lab/main.37f2fbe68ea6518f8ee9.js"></script><script type="text/javascript" src="/static/lab/vendors~main.479f39ac3cf9b3b8636e.js"></script></body>
+</html>
